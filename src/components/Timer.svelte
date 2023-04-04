@@ -1,6 +1,6 @@
 <script>
   import { tweened } from "svelte/motion";
-  let original = 5 * 60;
+  let original = 600;
   let timer = tweened(original);
   setInterval(() => {
     if ($timer > 0) $timer--;
@@ -14,9 +14,10 @@
     class="position-fixed top-50 start-50 d-flex justify-content-center align-items-center w-100 h-100"
     style="transform: translate(-50%, -50%);background-color: rgba(0, 0, 0, 0.3);"
   >
-    <div class="p-5 rounded text-center bg-white" style="min-width: 400px;">
-      <h5 class="text-dark bg-white">Your time is over</h5>
-      <a href="/result"><button class="btn btn-dark">See Your Result</button></a
+    <div class="p-5 rounded text-center bg-dark" style="min-width: 400px;">
+      <h5 class="text-white bg-white">Your time is over</h5>
+      <a href="/result"
+        ><button class="btn btn-danger text-white">See Your Result</button></a
       >
     </div>
   </div>

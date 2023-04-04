@@ -31,7 +31,7 @@
 
     <button
       on:click={() => (sidebar_show = !sidebar_show)}
-      class="btn btn-warning"
+      class="btn btn-warning text-dark"
     >
       List
     </button>

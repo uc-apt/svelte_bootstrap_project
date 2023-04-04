@@ -20,11 +20,11 @@
 
 <div>
   <div
-    class="d-flex justify-content-between p-2 align-items-center bgColor  text-white"
+    class="d-flex justify-content-evenly p-2 align-items-center bgColor  text-white"
   >
     <button
       on:click={() => (sidebar_show = !sidebar_show)}
-      class="btn btn-danger"
+      class="btn btn-danger text-white"
     >
       List
     </button>

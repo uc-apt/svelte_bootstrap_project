@@ -27,7 +27,7 @@
               <div class="d-flex">
                 {#if answers.is_correct == 1}
                   <p class="h6 my-auto">{String.fromCharCode(65 + j)}</p>
-                  <label class="w-100 m-2">
+                  <label class="w-100 m-2 text-success">
                     <input type="radio" checked />
                     {@html answers.answer}
                   </label>
