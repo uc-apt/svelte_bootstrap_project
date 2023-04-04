@@ -23,7 +23,7 @@
 
 <div>
   <div
-    class="d-flex justify-content-between p-2 align-items-center bgColor  text-white "
+    class="d-flex justify-content-evenly p-2 align-items-center bgColor  text-white "
   >
     <button class="btn btn-danger">
       <Timer />

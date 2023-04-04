@@ -17,7 +17,7 @@
 
 <div class="mycontainer bgColor">
   <HeaderPart />
-  <div class="container mt-3 ">
+  <div class="container containerQues">
     {#each all_questions as data, i}
       {#if current_question === i}
         <div>
@@ -70,13 +70,17 @@
     min-height: 100vh;
     min-width: 828px !important;
   }
+  .containerQues {
+    margin-top: 50px;
+  }
   .bgColor {
-    background: rgb(2, 0, 36);
+    /* background: rgb(2, 0, 36);
     background: linear-gradient(
       180deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(0, 0, 0, 1) 27%,
       rgba(0, 212, 255, 1) 100%
-    );
+    ); */
+    background-color: black;
   }
 </style>

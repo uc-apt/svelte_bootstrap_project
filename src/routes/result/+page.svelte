@@ -66,31 +66,31 @@
         class="d-flex flex-column  align-items-center btn  border border-primary rounded w-50"
       >
         <p class="dataStyle text-info">{percentage} %</p>
-        <h6 class="text-info">Result</h6>
+        <h6 class="text-info textStyle">Result</h6>
       </div>
       <div
         class="d-flex flex-column align-items-center btn border border-primary rounded w-50  ms-3"
       >
         <p class="dataStyle text-primary">11</p>
-        <h6 class="text-primary">Total item</h6>
+        <h6 class="text-primary textStyle">Total item</h6>
       </div>
       <div
         class="d-flex flex-column align-items-center btn border border-primary rounded w-50 ms-3"
       >
         <p class="dataStyle text-success">{correct}</p>
-        <h6 class="text-success">Correct</h6>
+        <h6 class="text-success textStyle">Correct</h6>
       </div>
       <div
         class="d-flex flex-column align-items-center btn border border-primary rounded w-50 ms-3"
       >
         <p class="dataStyle text-danger">{incorrect}</p>
-        <h6 class="text-danger">Incorrect</h6>
+        <h6 class="text-danger textStyle">Incorrect</h6>
       </div>
       <div
         class="d-flex flex-column align-items-center btn border border-primary rounded w-50 ms-3"
       >
         <p class="dataStyle text-warning">{unselected_ques}</p>
-        <h6 class="text-warning">Unattempted</h6>
+        <h6 class="text-warning textStyle">Unattempted</h6>
       </div>
     </div>
     <table class="table">
@@ -156,12 +156,16 @@
     justify-content: center;
   }
   .bgColor {
-    background: rgb(2, 0, 36);
+    /* background: rgb(2, 0, 36);
     background: linear-gradient(
       180deg,
       rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 1) 27%,
       rgba(0, 212, 255, 1) 100%
-    );
+    ); */
+    background-color: black;
+  }
+  .textStyle {
+    font-size: 20px;
   }
 </style>
