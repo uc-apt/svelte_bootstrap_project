@@ -9,6 +9,9 @@
     all_questions = await response.json();
     question_no = new URL(location.href).searchParams.get("qno");
   });
+  // afterUpdate(() => {
+  //   console.log("url updated");
+  // });
 </script>
 
 <div class="mycontainer bgColor">
@@ -57,8 +60,14 @@
 >
   <ReviewFooter
     {question_no}
-    on:prevPage_rev={() => (question_no = parseInt(question_no) - 1)}
-    on:nextPage_rev={() => (question_no = parseInt(question_no) + 1)}
+    on:prevPage_rev={() => {
+      question_no = parseInt(question_no) - 1;
+      console.log("question_no : ", question_no);
+    }}
+    on:nextPage_rev={() => {
+      question_no = parseInt(question_no) + 1;
+      console.log("question_no : ", question_no);
+    }}
     on:updateQues_rev={(event) => {
       question_no = event.detail;
     }}

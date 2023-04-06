@@ -4,6 +4,7 @@
   const dispatch = createEventDispatcher();
   export let question_no;
   let sidebar_show = false;
+  let inReviewFooter = true;
 
   const prevPage = () => {
     dispatch("prevPage_rev");
@@ -20,7 +21,7 @@
 
 <div>
   <div
-    class="d-flex justify-content-evenly p-2 align-items-center bgColor  text-white"
+    class="d-flex justify-content-evenly p-2 align-items-center bgColor text-white"
   >
     <button
       on:click={() => (sidebar_show = !sidebar_show)}
@@ -28,20 +29,27 @@
     >
       List
     </button>
-    <SidePanel bind:show={sidebar_show} on:displayQuesNum={displayQuesNum} />
+    <SidePanel
+      bind:inReviewFooter
+      bind:show={sidebar_show}
+      on:displayQuesNum={displayQuesNum}
+    />
 
-    <button
+    <a
       on:click={prevPage}
+      href="/review?qno={parseInt(question_no)}"
       class="btn btn-primary"
-      disabled={parseInt(question_no) <= 1 ? true : false}>Previous</button
+      style={parseInt(question_no) <= 1 ? "pointer-events:none;" : ""}
+      >Previous</a
     >
     <button class="btn text-white">
       {parseInt(question_no)} of 11
     </button>
-    <button
+    <a
       on:click={nextPage}
+      href="/review?qno={parseInt(question_no)}"
       class="btn btn-primary"
-      disabled={parseInt(question_no) > 10 ? true : false}>Next</button
+      style={parseInt(question_no) > 10 ? "pointer-events:none;" : ""}>Next</a
     >
     <a class="" href="/">
       <button class="btn btn-primary">Dashboard</button>
